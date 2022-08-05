@@ -119,18 +119,18 @@ describe('get a planet from swapi - GET/planet/show-from-swapi/:id', () => {
     })
 })
 
-// describe('get a planet from swapi and save it in the database - GET/planet/get-from-swapi-save-to-database/:id', () => {
-//     describe('given a valid id', () => {
-//         test('should respond with a 200 status code', async () => {
-//             const res = await request(app).get('/planet/get-from-swapi-save-to-database/1').send();
-//             expect(res.statusCode).toBe(200);
-//         });  
-//     })
+describe('get a planet from swapi and save it in the database - GET/planet/get-from-swapi-save-to-database/:id', () => {
+    describe('given a valid id', () => {
+        test('should respond with a 200 status code', async () => {
+            const res = await request(app).get('/planet/get-from-swapi-save-to-database/1').send();
+            expect(res.statusCode).toBe(200);
+        });  
+    })
 
-//     describe('given an invalid id', () => {
-//         test('should respond with a 400 status code', async () => {
-//             const res = await request(app).get(`/planet/get-from-swapi-save-to-database/stringID`);
-//             expect(res.statusCode).toBe(400);
-//         });
-//     })
-// })
+    describe('given an invalid id', () => {
+        test('should respond with a 400 status code', async () => {
+            const res = await request(app).get(`/planet/get-from-swapi-save-to-database/stringID`);
+            expect(res.statusCode).toBe(400);
+        });
+    })
+})

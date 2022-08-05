@@ -13,6 +13,9 @@ routes.post('/save-to-database/', planet.save);
 // swapi functions
 routes.get('/show-from-swapi/:id', planet.showSwapi);
 
+// combinate
+routes.get('/get-from-swapi-save-to-database/:id', planet.getAndSave);
+
 module.exports = {
     routes,
 }

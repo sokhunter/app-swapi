@@ -49,10 +49,26 @@ const showSwapi = (req, res) => {
 
 };
 
+const getAndSave = (req, res) => {
+    let id = parseInt(req.params.id);
+    if (isNaN(id)) {
+        return res.status(400).json({ error: "El ID debe ser un número" });
+    }
+    swapiRepository.show(id)
+        .then(response => {
+            planetRepository.save(response)
+            .then(rsp => {
+                res.json(rsp);
+            })
+        }
+    );
+};
+
 
 module.exports = {
     show,
     showAll,
     save,
     showSwapi,
+    getAndSave,
 }
