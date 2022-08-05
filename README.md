@@ -2,6 +2,14 @@
 App swapi - get and save planets with nodeJs,  serverless framework, express and mysql
 
 ## Configuration
+### Create database
+Create a dabatase with the next table
+```
+| id | nombre    | diametro | periodo_rotacion | periodo_orbita | clima | gravedad   | terreno | superficie_agua | poblacion | url                                   | f_creacion                  | f_edicion                   |
+| -- | --------- |----------|------------------|----------------|-------|------------|---------|-----------------|-----------|---------------------------------------|-----------------------------|-----------------------------|
+| 1  | Alderaan  | 10465    | 23               | 360            | arid  | 1 standard | desert  | 40              | 200000    | https://swapi.py4e.com/api/planets/2/ | 2014-12-10T11:35:48.479000Z | 2014-12-20T20:58:18.420000Z |
+| 2  | Tatooine  | 12500    | 24               | 304            | arid  | 1 standard | desert  | 1               | 20000000  | https://swapi.py4e.com/api/planets/1/ | 2014-12-09T13:50:49.641000Z | 2014-12-20T20:58:18.411000Z |
+```
 ### Install dependencies 
 ```
 npm install
