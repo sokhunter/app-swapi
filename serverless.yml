@@ -29,11 +29,17 @@ provider:
     shouldStartNameWithService: true
 
 plugins:
+  - serverless-auto-swagger
   - serverless-offline
 # you can overwrite defaults here
 #  stage: dev
 #  region: us-east-1
 
+custom:
+  autoswagger:
+    useStage: true
+    basePath: '/dev'
+    generateSwaggerOnDeploy: false
 # you can add statements to the Lambda function's IAM Role here
 #  iam:
 #    role:
