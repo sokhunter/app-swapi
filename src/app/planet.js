@@ -1,4 +1,5 @@
 const planetRepository = require('../repository/planetRepository');
+const swapiRepository = require('../repository/swapiRepository');
 
 const show = (req, res) => {
     let id = parseInt(req.params.id);
@@ -35,9 +36,23 @@ const save = (req, res) => {
     });
 };
 
+const showSwapi = (req, res) => {
+    let id = parseInt(req.params.id);
+    if (isNaN(id)) {
+        return res.status(400).json({ error: "El ID debe ser un número" });
+    }
+    swapiRepository.show(id)
+        .then(response => {
+            res.json(response);
+        }
+    );
+
+};
+
 
 module.exports = {
     show,
     showAll,
-    save
+    save,
+    showSwapi,
 }

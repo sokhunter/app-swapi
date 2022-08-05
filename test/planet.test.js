@@ -98,26 +98,26 @@ describe('save a planet - POST/planet/save-to-database', () => {
     })
 })
 
-// describe('get a planet from swapi - GET/planet/show-from-swapi/:id', () => {
-//     describe('given a valid id', () => {
-//         test('should respond with a 200 status code', async () => {
-//             const res = await request(app).get('/planet/show-from-swapi/1').send();
-//             expect(res.statusCode).toBe(200);
-//         });
+describe('get a planet from swapi - GET/planet/show-from-swapi/:id', () => {
+    describe('given a valid id', () => {
+        test('should respond with a 200 status code', async () => {
+            const res = await request(app).get('/planet/show-from-swapi/1').send();
+            expect(res.statusCode).toBe(200);
+        });
 
-//         test('should respond with an array', async () => {
-//             const res = await request(app).get('/planet/show-from-swapi/1').send();
-//             expect(res.body).toBeInstanceOf(Object);
-//         })
-//     })
+        test('should respond with an array', async () => {
+            const res = await request(app).get('/planet/show-from-swapi/1').send();
+            expect(res.body).toBeInstanceOf(Object);
+        })
+    })
 
-//     describe('given an invalid id', () => {
-//         test('should respond with a 400 status code', async () => {
-//             const res = await request(app).get(`/planet/show-from-swapi/stringID`);
-//             expect(res.status).toBe(400);
-//         })
-//     })
-// })
+    describe('given an invalid id', () => {
+        test('should respond with a 400 status code', async () => {
+            const res = await request(app).get(`/planet/show-from-swapi/stringID`);
+            expect(res.status).toBe(400);
+        })
+    })
+})
 
 // describe('get a planet from swapi and save it in the database - GET/planet/get-from-swapi-save-to-database/:id', () => {
 //     describe('given a valid id', () => {
