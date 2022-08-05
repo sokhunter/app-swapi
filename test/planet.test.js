@@ -24,17 +24,17 @@ describe('show a planet from database - GET/planet/show-from-database/:id', () =
 
 })
 
-// describe('show all planets from database - GET/planet/show-all-from-database', () => {
-//     test('should respond with a 200 status code', async () => {
-//         const res = await request(app).get('/planet/show-all-from-database').send();
-//         expect(res.statusCode).toBe(200);
-//     })
+describe('show all planets from database - GET/planet/show-all-from-database', () => {
+    test('should respond with a 200 status code', async () => {
+        const res = await request(app).get('/planet/show-all-from-database').send();
+        expect(res.statusCode).toBe(200);
+    })
 
-//     test('should respond with an array', async () => {
-//         const res = await request(app).get('/planet/show-all-from-database').send();
-//         expect(res.body).toBeInstanceOf(Array);
-//     })
-// })
+    test('should respond with an array', async () => {
+        const res = await request(app).get('/planet/show-all-from-database').send();
+        expect(res.body).toBeInstanceOf(Array);
+    })
+})
 
 // describe('save a planet - POST/planet/save-to-database', () => {
 //     describe('given all the fields', () => {

@@ -11,6 +11,14 @@ const show = (req, res) => {
     })
 }
 
+const showAll = (req, res) => {
+    planetRepository.showAll()
+    .then(response => {
+        res.json(response);
+    });
+};
+
 module.exports = {
     show,
+    showAll,
 }

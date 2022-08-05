@@ -16,6 +16,22 @@ const show = function (id) {
     })
 }
 
+const showAll = function() {
+    return new Promise(function (resolve, reject) {
+        connection.query(
+            "select * from planetas",
+            function (err, rows) {
+                if (rows == undefined) {
+                    reject(new Error("Error results is undefined"));
+                } else {
+                    resolve(rows);
+                }
+            }
+        )
+    })
+}
+
 module.exports = {
     show,
+    showAll,
 }
